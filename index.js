@@ -67,6 +67,8 @@ fetch("./data.json")
           count: counter,
         };
 
+        // MAKING LOGIC FOR SHOPLIST (GONE WRONG)
+
         shopList.map((listedItem) => {
           if (listedItem.id !== shopListItem.id || !listedItem) {
             shopList.push(shopListItem);
