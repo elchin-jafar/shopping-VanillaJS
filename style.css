@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart{
+    width: 500px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 5px;
+}
+
+.cart img {
+    width: 200px;
+}
+
+.decrement, .increment {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0 5px;
+}
+
+.decrement:hover, .increment:hover {
+    background-color: rgb(78, 73, 73);
+    color: white;
+} 
+span {
+    font-size: 2rem;
+    margin: 3px;
+}
+
+button {
+    display: block;
+    font-size: 2rem;
+    margin: 5px auto ;
+}
