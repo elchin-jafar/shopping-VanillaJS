@@ -69,13 +69,18 @@ fetch("./data.json")
 
         // MAKING LOGIC FOR SHOPLIST (GONE WRONG)
 
-        shopList.map((listedItem) => {
-          if (listedItem.id !== shopListItem.id || !listedItem) {
-            shopList.push(shopListItem);
-          } else if (listedItem.id == shopListItem.id) {
-            listedItem.count += shopListItem.count;
-          }
-        });
+        if (shopList.length < 1) {
+          shopList.push(shopListItem);
+        } else {
+          shopList.map((listedItem) => {
+            if (listedItem.id === shopListItem.id) {
+              listedItem.count = shopListItem.count;
+              return;
+            } else {
+              shopList.push(shopListItem);
+            }
+          });
+        }
 
         console.log(shopList);
         ul.append(li);
